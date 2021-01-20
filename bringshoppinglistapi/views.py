@@ -40,7 +40,7 @@ def addItem(request):
         logger.info('Successful request')
         logger.info('[END] addItem')
 
-        return HttpResponse(status=204)
+        return HttpResponse("Successful response "+response.status_code, status=204)
     else:
         logger.error('Error code: '+response.status_code)
         logger.error(response.text)
